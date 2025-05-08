@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Web Page Basics</title>
+      <link rel="stylesheet" href="../../style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   </head>
+   <div id="img-preview" class="img-preview hidden">
+      <div id="img-prev-close">
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <img class="" src="" alt="" />
+   </div>
+   <body data-language="files">
+      <aside id="navbar" class="sidebar">
+         <header>Web Basics</header>
+         <div class="sidebar-category">
+            <div class="languages">
+               <a href="../html-basics/"><i class="fa-brands fa-html5"></i></a>
+               <a href="../css-basics/"><i class="fa-brands fa-css3-alt"></i></a>
+               <a href="../javascirpt-basics/"><i class="fa-brands fa-square-js"></i></a>
+               <a href="../creating-files/" data-active><i class="fa-regular fa-file-code"></i></a>
+            </div>
+            <a class="overview" href="../../">Overview</a>
+         </div>
+         <div class="chapter-container">
+            <div data-chapter="files" class="chapter">Files</div>
+         </div>
+         <div id="sidebar" class="sidebar-links">
+            <ol>
+               <li><a class="nav-link" href="#JavaScript_Basics">Creating Files</a></li>
+               <li><a class="nav-link" href="#File_Location">File Location</a></li>
+               <li><a class="nav-link" href="#Naming_Your_Files">Naming Your Files</a></li>
+               <li class="toggle">
+                  <details>
+                     <summary>Website Structure</summary>
+                     <ol>
+                        <li><a class="nav-link" href="#Website_Structure">Basics</a></li>
+                        <li><a class="nav-link" href="#index_html">Index</a></li>
+                        <li><a class="nav-link" href="#images_folder">Images Folder</a></li>
+                        <li><a class="nav-link" href="#styles_folder">Styles Folder</a></li>
+                        <li><a class="nav-link" href="#scripts_folder">SCripts Folder</a></li>
+                     </ol>
+                  </details>
+               </li>
+               <li><a class="nav-link" href="#File_Paths">File Paths</a></li>
+            </ol>
+         </div>
+      </aside>
+      <div data-sb-toggle class="sb-toggle">
+         <i class="fa-solid fa-angles-right"></i>
+      </div>
+
+      <main id="main-doc">
+         <div class="master-section">
+            <!-- CREATING FILES -->
+            <section id="Creating Files" class="main-section">
+               <header>Creating Files</header>
+
+               <p>
+                  A website consists of many files: text content, code, stylesheets, media content, and so on. When
+                  you're building a website, you need to assemble these files into a sensible structure on your local
+                  computer, make sure they can talk to one another, and get all your content looking right before you
+                  eventually upload them to a server. This guide discusses some issues you should be aware of so you can
+                  set up a sensible file structure for your website.
+               </p>
+            </section>
+
+            <!-- FILE LOCATION -->
+            <section class="main-section" id="File_Location">
+               <header>File Location</header>
+
+               <p>
+                  When you are working on a website locally on your computer, you should keep all the related files in a
+                  single folder that mirrors the published website's file structure on the server. This folder can live
+                  anywhere you like, but you should put it somewhere where you can easily find it, maybe on your
+                  Desktop, in your Home folder, or at the root of your hard drive.
+               </p>
+               <ol>
+                  <li>
+                     Choose a place to store your website projects. Inside your chosen place, create a new folder called
+                     <code class="inline-code">web-projects</code> (or similar). This is where all your website projects
+                     will live.
+                  </li>
+                  <li>
+                     Inside this first folder, create another folder to store your first website in. Call it
+                     <code class="inline-code">test-site</code> (or something more imaginative).
+                  </li>
+               </ol>
+            </section>
+
+            <!-- NAMING YOUR FILES -->
+            <section class="main-section" id="Naming_Your_Files">
+               <header>Naming Your Files</header>
+
+               <p>
+                  It's important to note that when naming your folders and files, it's better to name them in lowercase
+                  with no spaces. This is because:
+               </p>
+               <ol>
+                  <li>
+                     Many computers, particularly web servers, are case-sensitive. So for example, if you put an image
+                     on your website at <code class="inline-code">test-site/MyImage.jpg</code> and then in a different
+                     file you try to invoke the image as <code class="inline-code">test-site/myimage.jpg</code>, it may
+                     not work.
+                  </li>
+                  <li>
+                     Browsers, web servers, and programming languages do not handle spaces consistently. For example, if
+                     you use spaces in your filename, some systems may treat the filename as two filenames. Some servers
+                     will replace the spaces in your filenames with "%20" (the character code for spaces in URLs),
+                     resulting in all your links being broken. It's better to separate words with hyphens, rather than
+                     underscores: <code class="inline-code">my-file.html</code> vs.
+                     <code class="inline-code">my_file.html</code>.
+                  </li>
+               </ol>
+
+               <p>
+                  The short answer is that you should use a hyphen for your file names. The Google search engine treats
+                  a hyphen as a word separator but does not regard an underscore that way. For these reasons, it is best
+                  to get into the habit of writing your folder and file names in lowercase with no spaces and with words
+                  separated by hyphens, at least until you know what you're doing. That way you'll bump into fewer
+                  problems down the road.
+               </p>
+            </section>
+
+            <!-- WEBSITE STRUCTURE -->
+            <section class="main-section" id="Website_Structure">
+               <header>Website Structure</header>
+
+               <p>
+                  The most common things you'll have on any website project we create are an index HTML file and folders
+                  to contain images, style files, and script files:
+               </p>
+
+               <ol class="list-sections">
+                  <li class="section" id="index_html">
+                     <strong><code class="inline-code">index.html</code>:</strong> This file will generally contain your
+                     homepage content, that is, the text and images that people see when they first go to your site.
+                     This file should be saved in your <code class="inline-code">test-site</code> folder.
+                  </li>
+                  <li class="section" id="images_folder">
+                     <strong><code class="inline-code">images</code> folder:</strong> This folder will contain all the
+                     images that you use on your site. You'll store it in your
+                     <code class="inline-code">test-site</code> folder.
+                  </li>
+                  <li class="section" id="styles_folder">
+                     <strong><code class="inline-code">styles</code> folder:</strong> This folder will contain the CSS
+                     code used to CSS style your content (for example, setting text and background colors). You'll store
+                     this in your <code class="inline-code">test-site</code> folder as well. All your CSS files can be
+                     created and saved as <code class="inline-code">fileName.css</code>.
+                  </li>
+                  <li class="section" id="scripts_folder">
+                     <strong><code class="inline-code">scripts</code> folder:</strong> This folder will contain all the
+                     JavaScript code used to add interactive functionality to your site (e.g. buttons that load data
+                     when clicked). You'll store this in your <code class="inline-code">test-site</code> folder too. All
+                     your Javascript files can be created and saved as <code class="inline-code">fileName.js</code>.
+                  </li>
+               </ol>
+            </section>
+
+            <!-- FILE PATHS -->
+            <section class="main-section" id="File_Paths">
+               <header>File Paths</header>
+
+               <p>
+                  To make files talk to one another, you have to provide a file path between them — basically a route,
+                  so one file knows where another one is. To demonstrate this, we'll show you a basic way that you can
+                  reference an image that you saved in your <code class="inline-code">images</code> folder:
+               </p>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<doct>DOCTYPE <at>html</at></doct>
+<ot>html <at>lang</at><atv>en</atv></ot>
+   <ot>head</ot>
+      <sct>meta <at>charset</at><atv>UTF-8</atv> </sct>
+      <sct>meta <at>name</at><atv>viewport</atv> <at>content</at><atv>width=device-width, initial-scale=1.0</atv> </sct>
+      <ot>title</ot>The Grumpy Donkey Website<ct>title</ct>
+   <ct>head</ct>
+   <ot>body</ot>
+      <ot>img <at>src</at><atv>images/you-image.png</atv></ot>
+   <ct>body</ct>
+<ct>html</ct>
+</pre>
+                  </code>
+               </div>
+
+               <p>
+                  The image is inside the <code class="inline-code">images</code> directory (folder), which is in the
+                  same directory as <code class="inline-code">index.html</code>. To walk down the file structure from
+                  <code class="inline-code">index.html</code> to our image, the file path we'd need is
+                  <code class="inline-code">images/your-image.png</code>. For example, if our image was called
+                  <code class="inline-code">menu-icon.png</code>, so the file path in this case would
+                  <code class="inline-code">images/firefox-icon.png</code>
+               </p>
+
+               <p>There are some general rules for file paths to note:</p>
+               <ul>
+                  <li>
+                     To link to a target file in the same directory as the invoking HTML file, just use the filename,
+                     e.g. <code class="inline-code">my-image.jpg</code>.
+                  </li>
+                  <li>
+                     To reference a file in a subdirectory, write the directory name in front of the path, plus a
+                     forward slash, e.g. <code class="inline-code">subdirectory/my-image.jpg</code>.
+                  </li>
+                  <li>
+                     To link to a target file in the directory above the invoking HTML file, write two dots. So for
+                     example, if <code class="inline-code">index.html</code> was inside a subfolder of test-site and
+                     my-image.jpg was inside test-site, you could reference my-image.jpg from
+                     <code class="inline-code">index.html</code> using <code class="inline-code">../my-image.jpg</code>.
+                  </li>
+                  <li>
+                     You can combine these as much as you like, for example
+                     <code class="inline-code">../subdirectory/another-subdirectory/my-image.jpg</code>.
+                  </li>
+               </ul>
+
+               <div class="note-card">
+                  <p>
+                     The Windows file system tends to use backslashes, not forward slashes, e.g.
+                     <code class="inline-code">C:\Windows</code>. This doesn't matter in HTML — even if you are
+                     developing your website on Windows, you should still use forward slashes in your code.
+                  </p>
+               </div>
+            </section>
+         </div>
+      </main>
+   </body>
+   <script src="../../scripts/htmlFormat.js" defer></script>
+   <script src="../../scripts/cssFormat.js" defer></script>
+   <script src="../../scripts/javascriptFormat.js"></script>
+
+   <!-- REMEMBER DOM ORDER IS RELATIVE TO JS LOAD ORDER !!! -->
+   <script src="../../scripts/script.js" defer></script>
+</html>

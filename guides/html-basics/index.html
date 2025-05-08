@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Web Page Basics</title>
+      <link rel="stylesheet" href="../../style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   </head>
+   <div id="img-preview" class="img-preview hidden">
+      <div id="img-prev-close">
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <img class="" src="" alt="" />
+   </div>
+   <body data-language="html">
+      <nav id="navbar" class="sidebar">
+         <header>Web Basics</header>
+         <div class="sidebar-category">
+            <div class="languages">
+               <a href="../html-basics/" data-active><i class="fa-brands fa-html5"></i></a>
+               <a href="../css-basics/"><i class="fa-brands fa-css3-alt"></i></a>
+               <a href="../javascirpt-basics/"><i class="fa-brands fa-square-js"></i></a>
+               <a href="../creating-files/"><i class="fa-regular fa-file-code"></i></a>
+            </div>
+            <a class="overview" href="../../">Overview</a>
+         </div>
+         <div class="chapter-container">
+            <div data-chapter="html" class="chapter">HTML</div>
+         </div>
+         <div id="sidebar" class="sidebar-links">
+            <ol>
+               <li><a class="nav-link" href="#HTML_Basics">HTML Basics</a></li>
+               <li><a class="nav-link" href="#Elements">Elements</a></li>
+               <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+               <li><a class="nav-link" href="#Nesting_Elements">Nesting Elements</a></li>
+               <li><a class="nav-link" href="#Void_Elements">Void Elements</a></li>
+               <li><a class="nav-link" href="#Document_Structure">Document Structure</a></li>
+               <li><a class="nav-link" href="#Images">Images</a></li>
+               <li class="toggle">
+                  <details>
+                     <summary>Marking Up Text</summary>
+                     <ol>
+                        <li><a class="nav-link" href="#Marking_Up_Text">Marking Up Text</a></li>
+                        <li><a class="nav-link" href="#Headings">Headings</a></li>
+                        <li><a class="nav-link" href="#Lists">Lists</a></li>
+                        <li><a class="nav-link" href="#Links">Links</a></li>
+                     </ol>
+                  </details>
+               </li>
+            </ol>
+         </div>
+      </nav>
+      <div data-sb-toggle class="sb-toggle">
+         <i class="fa-solid fa-angles-right"></i>
+      </div>
+
+      <main id="main-doc">
+         <div class="master-section">
+            <!-- HTML-BASICS -->
+            <section id="HTML_Basics" class="main-section">
+               <header>HTML Basics</header>
+               <p>
+                  HyperText Markup Language, otherwise known as HTML, is a markup language that defines the structure of
+                  your content. HTML consists of a series of elements, which you use to enclose, or wrap, different
+                  parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can
+                  make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or
+                  smaller, and so on. For example, take the following line of content:
+               </p>
+               <p>
+                  It's the code that is used to structure a web page and its content. For example, content could be
+                  structured within a set of paragraphs, a list of bulleted points, or using images and data tables. To
+                  get started, you'll need to create an <code class="inline-code">index.html</code> file which you can
+                  find out how to do <a href="files.html">here</a>.
+               </p>
+            </section>
+
+            <!-- ELEMENTS -->
+            <section id="Elements" class="main-section">
+               <header>Elements</header>
+
+               <img class="transparent-img demo-img" src="../../img/html_element_example.svg" alt="" />
+               <p>Let's break this down a bit. The element's main parts are as follows:</p>
+               <ul>
+                  <li>
+                     <strong>Opening Tag:</strong>
+                     <p>
+                        This is consists of the name of the element, in this case
+                        <code class="inline-code">p</code>, wrapped in closing angle brackets. This states where the
+                        element begins.
+                     </p>
+                     <div class="code-example">
+                        <code><ot>p</ot></code>
+                     </div>
+                  </li>
+                  <li>
+                     <strong>Closing Tag:</strong>
+                     <p>
+                        This is the same as the opening tag, expect that it includes a <em>forward slash</em> before the
+                        element name. This states where the element ends and MUST be included. Otherwise, it can lead to
+                        strange results.
+                     </p>
+                     <div class="code-example">
+                        <code><ct>p</ct></code>
+                     </div>
+                  </li>
+                  <li>
+                     <strong>The Content:</strong>
+                     <p>
+                        This is just the content of the element which, in this case, is just text. An element's content
+                        can also be more elements. We'll learn more about
+                        <a href="#Nesting-Elements">Nesting elements</a> later.
+                     </p>
+                     <div class="code-example"><code>Grumpy Donkey</code></div>
+                  </li>
+                  <li>
+                     <strong> The Element:</strong>
+                     <p>The opening tag, closing tag, & content all together comprise of a single element.</p>
+                     <div class="code-example">
+                        <code><ot>p</ot>Grumpy Donkey<ct>p</ct></code>
+                     </div>
+                  </li>
+               </ul>
+            </section>
+
+            <!-- ATTRIBUTES -->
+            <section id="Attributes" class="main-section">
+               <header>Attributes</header>
+
+               <img class="transparent-img demo-img" src="../../img/html_attribute_example.svg" alt="" />
+               <p>
+                  Attributes contain additional information about an element. Here,
+                  <code class="inline-code">class</code> is the attribute's <em>name</em> and
+                  <code class="inline-code">beware</code> is the attribute's <em>value</em>. The
+                  <code class="inline-code">class</code> attribute allows you to give the element a non-unique
+                  identifier that can be used to target it (including all other elements with the same
+                  <code class="inline-code">class</code> value). This is commonly used for styling in CSS sheets.
+               </p>
+            </section>
+
+            <!-- NESTING ELEMENTS -->
+            <section id="Nesting_Elements" class="main-section">
+               <header>Nesting Elements</header>
+
+               <p>
+                  As stated earlier, it is possible put elements within other elements — this is called
+                  <strong>nesting</strong>. For example, if we wanted to truly emphasize that our Donkey was
+                  <strong>really</strong> grumpy, we could wrap the text "really" in a
+                  <code class="inline-code"><t>strong</t></code> element, which would embolden the text.
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code><ot>p</ot>This Donkey is <ot>strong</ot>Really<ct>strong</ct> grumpy<ct>p</ct></code>
+               </div>
+               <p>
+                  You always need to make sure that your elements are nested properly. In the example above, we opened
+                  the
+                  <code class="inline-code"><t>p</t></code> element first, then the
+                  <code class="inline-code"><t>strong</t></code> element; therefore, we need to close the
+                  <code class="inline-code"><t>strong</t></code> element first, then the
+                  <code class="inline-code"><t>p</t></code> element.
+               </p>
+            </section>
+
+            <!-- VOID ELEMENTS -->
+            <section id="Void_Elements" class="main-section">
+               <header>Void Elements</header>
+
+               <p>
+                  Some elements have no content and don't require a closing tag to work — these are called
+                  <strong>void elements</strong>. For example, take an <code class="inline-code"><t>img</t></code> tag.
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <sct>img <at>src</at><atv>images/grump-donkey.png</atv> <at>alt</at><atv>a test image</atv></sct>
+                  </code>
+               </div>
+               <p>
+                  This contains two attributes, but no inner text and closing tags like we had in the previous examples.
+                  This is because an image element doesn't wrap content to affect it. It's purpose is to embed an image
+                  in the HTML page in the place it appears, given it has a <code class="inline-code">src</code>.
+               </p>
+            </section>
+
+            <!-- HTML DOCUMENT STRUCTURE -->
+            <section id="Document_Structure" class="main-section">
+               <header>Document Structure</header>
+
+               <p>
+                  Now we knows the basics of <strong>HTML Elements</strong>, but they aren't handy on their own. They
+                  need a foundation. Now we'll look at how individual elements are combined to form an entire HTML page.
+                  A website needs it's files where it stores the code that helps it to function. HTML is stored in a
+                  <code class="inline-code">index.html</code> file.
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<doct>DOCTYPE <at>html</at></doct>
+<ot>html <at>lang</at><atv>en</atv></ot>
+   <ot>head</ot>
+      <sct>meta <at>charset</at><atv>UTF-8</atv> </sct>
+      <sct>meta <at>name</at><atv>viewport</atv> <at>content</at><atv>width=device-width, initial-scale=1.0</atv> </sct>
+      <ot>title</ot>The Grumpy Donkey Website<ct>title</ct>
+   <ct>head</ct>
+   <ot>body</ot>
+      <cmt type="html">Document Content</cmt>
+   <ct>body</ct>
+<ct>html</ct>
+</pre>
+                  </code>
+               </div>
+               <ul>
+                  <li>
+                     <code class="inline-code"><doct>DOCTYPE html</doct></code> — This is what you'll see at the start
+                     of every html website. It's a require preamble. n the mists of time, when HTML was young (around
+                     1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to
+                     be considered good HTML, which could mean automatic error checking and other useful things.
+                     However, these days, they don't do much and are basically just needed to make sure your document
+                     behaves correctly. That's all you need to know for now.
+                  </li>
+                  <li>
+                     <code class="inline-code"><ot>html</ot> <ct>html</ct></code> — This element wraps all the content
+                     on the entire page and is sometimes known as the root element. It also includes the lang attribute,
+                     setting the primary language of the document.
+                  </li>
+                  <li>
+                     <code class="inline-code"><ot>head</ot> <ct>head</ct></code> — This element acts as a container for
+                     all the stuff you want to include on the HTML page that isn't the content you are showing to your
+                     page's viewers. This includes things like keywords and a page description that you want to appear
+                     in search results, CSS to style our content, character set declarations, and more.
+                  </li>
+                  <li>
+                     <code class="inline-code"
+                        ><sct>meta <at>charset</at><atv>UTF-8</atv> </sct></code
+                     >
+                     — This element sets the character set your document should use to UTF-8 which includes most
+                     characters from the vast majority of written languages. Essentially, it can now handle any textual
+                     content you might put on it. There is no reason not to set this, and it can help avoid some
+                     problems later on.
+                  </li>
+                  <li>
+                     <code class="inline-code"
+                        ><sct
+                           >meta <at>name</at><atv>viewport</atv> content=<at>width=device-width, initial-scale=1.0</at>
+                        </sct></code
+                     >
+                     — A long one but, the viewport attribute ensures the page renders at the width of viewport,
+                     preventing mobile browsers from rendering pages wider than the viewport and then shrinking them
+                     down. The content attribute gives the value associated with the http-equiv or name attribute.
+                  </li>
+                  <li>
+                     <code class="inline-code"><ot>title</ot> <ct>title</ct></code> — This sets the title of your page,
+                     which is the title that appears in the browser tab the page is loaded in. It is also used to
+                     describe the page when you bookmark/favorite it.
+                  </li>
+                  <li>
+                     <code class="inline-code"><ot>body</ot> <ct>body</ct></code> — This contains all the content that
+                     you want to show to web users when they visit your page, whether that's text, images, videos,
+                     games, playable audio tracks, or whatever else.
+                  </li>
+               </ul>
+            </section>
+
+            <!-- IMAGES -->
+            <section id="Images" class="main-section">
+               <header>Images</header>
+
+               <p>
+                  Let's turn our attention to the <code class="inline-code"><t>img</t></code> element for a moment:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <sct>img <at>src</at><atv>images/grump-donkey.png</atv> <at>alt</at><atv>a test image</atv> </sct>
+                  </code>
+               </div>
+               <p>
+                  As we stated before, it embeds an image into our page in the position it appears. It does this via the
+                  src (source) attribute, which contains the path to our image file.
+               </p>
+               <p>
+                  We have also included an <code class="inline-code">alt</code> (alternative) attribute. In the
+                  <code class="inline-code">alt</code> attribute, you specify descriptive text for users who cannot see
+                  the image, usually because of the following reason:
+               </p>
+               <ol>
+                  <li>
+                     They are visually impaired. Users with significant visual impairments often use tools called screen
+                     readers to read out the alt text to them.
+                  </li>
+                  <li>Something has gone wrong causing the image not to display.</li>
+               </ol>
+               <p>
+                  The keywords for alt text are "descriptive text". The alt text you write should provide the reader
+                  with enough information to have a good idea of what the image conveys
+               </p>
+            </section>
+
+            <!-- MARKING UP TEXT -->
+            <section id="Marking_Up_Text" class="main-section">
+               <header>Marking Up Text</header>
+
+               <p>In this section, you will learn some essential HTML elements you'll use for marking up text.</p>
+            </section>
+
+            <!-- SUB-SECTION: HEADINGS -->
+            <section id="Headings" class="main-section sub">
+               <header>Headings</header>
+               <p>
+                  heading elements allow you to specify certain parts of your content are headings — or subheadings. In
+                  the same way that a book has a title, chapter titles, & subtitles, HTML documents can too. There are 6
+                  heading levels at your disposal: <code class="inline-code"><t>h1</t> - <t>h6</t></code
+                  >. You'll usually only be using 3 to 4 at most though.
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre style="white-space: pre-line">
+                        <cmt type="html">6 Heading Levels:</cmt>
+                        <ot>h1</ot>Heading 1<ct>h1</ct>
+                        <ot>h2</ot>Heading 2<ct>h2</ct>
+                        <ot>h3</ot>Heading 3<ct>h3</ct>
+                        <ot>h4</ot>Heading 4<ct>h4</ct>
+                        <ot>h5</ot>Heading 5<ct>h5</ct>
+                        <ot>h6</ot>Heading 6<ct>h6</ct>
+                     </pre>
+                  </code>
+               </div>
+               <div class="code-output">
+                  <img class="demo-img" src="../../img/heading_types_output_example.png" alt="" />
+               </div>
+               <div class="note-card">
+                  <p>
+                     Any text in HTML between by <code class="inline-code"><ot>!--</ot></code> and
+                     <code class="inline-code"><ct>--</ct></code> is an HTML comment. Your browser ignores comments and
+                     doesn't render it. It's commonly used as notes, label and as its name suggests, comments.
+                  </p>
+               </div>
+               <p>
+                  You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text
+                  bigger or bold, because they are used for accessibility and other reasons such as SEO. Try to create a
+                  meaningful sequence of headings on your pages, without skipping levels.
+               </p>
+            </section>
+
+            <!-- SUB-SECTION: LISTS -->
+            <section id="Lists" class="main-section sub">
+               <header>Lists</header>
+               <p>
+                  A lot of web's content is comprised of lists. Even in this website, you can find numerous list
+                  elements. Marking up lists always consists of at least 2 elements with the most common list types
+                  being
+                  <code class="inline-code">ordered</code> and <code class="inline-code">unordered</code> lists:
+               </p>
+               <ol>
+                  <li>
+                     <strong>Unordered Lists:</strong>
+                     <p>
+                        These are lists where the order of the items don't matter. They're look and work a lot like the
+                        common bullet list that you find in a Word Document. They're wrapped in a
+                        <code class="inline-code"><ot>ul</ot></code> element.
+                     </p>
+                  </li>
+                  <li>
+                     <strong>Ordered Lists:</strong>
+                     <p>
+                        They're exactly like unordered lists, expect that, as their name suggests, they're ordered. They
+                        work like the common Word Document number list and are wrapped an
+                        <code class="inline-code"><ot>ol</ot></code> element.
+                     </p>
+                  </li>
+               </ol>
+               <p>
+                  Each item inside a <code class="inline-code">List</code> is put inside a
+                  <code class="inline-code"><ot>li</ot></code> (list item) element.
+               </p>
+               <p>For example, if we wanted to turn the part of the following paragraph into a list:</p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre style="white-space: pre-line">
+                        <ot>p</ot>
+                           Some of the possible reasons for our Donkey's bad mood could be that
+                           he's hungry, he has overdue taxes, or he just can't pay his bills.
+                        <ct>p</ct>
+                     </pre>
+                  </code>
+               </div>
+               <p>We could modify the markup to this:</p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<ot type="open">p</ot>Some of the possible reasons for our Donkey's bad mood could be the following:<ct>p</ct>
+
+<ot>ul</ot>
+   <ot>li</ot>He's hungry<ct>li</ct>
+   <ot>li</ot>He has overdue taxes<ct>li</ct>
+   <ot>li</ot>He can't pay his bills<ct>li</ct>
+<ct>ul</ct>
+</pre>
+                  </code>
+               </div>
+
+               <div class="code-output">
+                  <img class="demo-img" src="../../img/list_output_example.png" alt="" />
+               </div>
+            </section>
+
+            <!-- SUB-SECTION: LINKS-->
+            <section id="Links" class="main-section sub">
+               <header>Links</header>
+
+               <p>
+                  Links are very important — they're what makes the web a web! To turn text into a link, we need to wrap
+                  it in an <code class="inline-code"><t>a</t></code> element ("a" being short for "anchor") like so:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <ot>a <at>href</at><atv>https://link.com</atv></ot
+                     >The Grumpy Donkey Website<ct>a</ct>
+                  </code>
+               </div>
+               <p>After you've made a link, click it to make sure it is sending you where you wanted it to.</p>
+
+               <div class="note-card">
+                  <p>
+                     <code class="inline-code">href</code> might appear like a rather obscure choice for an attribute
+                     name at first and you might have trouble remembering it. If you do, just remember that it stands
+                     for <em><strong>h</strong>ypertext <strong>ref</strong>erence</em>
+                  </p>
+               </div>
+            </section>
+         </div>
+      </main>
+   </body>
+   <script src="../../scripts/htmlFormat.js" defer></script>
+   <script src="../../scripts/cssFormat.js" defer></script>
+   <script src="../../scripts/javascriptFormat.js"></script>
+
+   <!-- REMEMBER DOM ORDER IS RELATIVE TO JS LOAD ORDER !!! -->
+   <script src="../../scripts/script.js" defer></script>
+</html>

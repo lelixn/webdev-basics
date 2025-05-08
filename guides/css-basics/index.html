@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Web Page Basics</title>
+      <link rel="stylesheet" href="../../style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   </head>
+   <div id="img-preview" class="img-preview hidden">
+      <div id="img-prev-close">
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <img class="" src="" alt="" />
+   </div>
+   <body data-language="css">
+      <aside id="navbar" class="sidebar">
+         <header>Web Basics</header>
+         <div class="sidebar-category">
+            <div class="languages">
+               <a href="../html-basics/"><i class="fa-brands fa-html5"></i></a>
+               <a href="../css-basics/" data-active><i class="fa-brands fa-css3-alt"></i></a>
+               <a href="../javascirpt-basics/"><i class="fa-brands fa-square-js"></i></a>
+               <a href="../creating-files/"><i class="fa-regular fa-file-code"></i></a>
+            </div>
+            <a class="overview" href="../../">Overview</a>
+         </div>
+         <div class="chapter-container">
+            <div data-chapter="css" class="chapter">CSS</div>
+         </div>
+         <div id="sidebar" class="sidebar-links">
+            <ol>
+               <li><a class="nav-link" href="#CSS_Basics">Introduction</a></li>
+               <li class="toggle">
+                  <details>
+                     <summary>Rulesets</summary>
+                     <ol>
+                        <li><a class="nav-link" href="#Rulesets">Introduction</a></li>
+                        <li><a class="nav-link" href="#Selecting_Multiple_Elements">Selecting Multiple Elements</a></li>
+                        <li class="toggle">
+                           <details>
+                              <summary>Types Of Selectors</summary>
+                              <ol>
+                                 <li><a class="nav-link" href="#Types_Of_Selectors">Introduction</a></li>
+                                 <li><a class="nav-link" href="#Element_Selector">Element Selector</a></li>
+                                 <li><a class="nav-link" href="#ID_Selector">ID Selectors</a></li>
+                                 <li><a class="nav-link" href="#Class_Selector">Class Selector</a></li>
+                                 <li><a class="nav-link" href="#Attribute_Selector">Attribute Selector</a></li>
+                                 <li><a class="nav-link" href="#Pseudo-Class_Selector">Pseudo Selector</a></li>
+                              </ol>
+                           </details>
+                        </li>
+                     </ol>
+                  </details>
+               </li>
+               <li><a class="nav-link" href="#The_Box_Model">The Box Model</a></li>
+               <li class="toggle">
+                  <details>
+                     <summary>Basic Styling</summary>
+                     <ol>
+                        <li><a class="nav-link" href="#Basic_Styling">Introduction</a></li>
+                        <li><a class="nav-link" href="#Page_Color">Page Color</a></li>
+                        <li><a class="nav-link" href="#Styling_The_Body">Styling The Body</a></li>
+                        <li><a class="nav-link" href="#Styling_The_Main_Title">Styling The Main Title</a></li>
+                        <li><a class="nav-link" href="#Centering_Images">Centering Images</a></li>
+                        <li><a class="nav-link" href="#Result">Result</a></li>
+                     </ol>
+                  </details>
+               </li>
+            </ol>
+         </div>
+      </aside>
+      <div data-sb-toggle class="sb-toggle">
+         <i class="fa-solid fa-angles-right"></i>
+      </div>
+
+      <main id="main-doc">
+         <div class="master-section">
+            <!-- CSS-BASICS -->
+            <section id="CSS_Basics" class="main-section">
+               <header>CSS Basics</header>
+               <p>
+                  Like HTML, CSS (Cascading Style Sheets) is not a programming language. It's not a markup language
+                  either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For
+                  example, this CSS selects paragraph text, setting the color to red:
+               </p>
+               <p>
+                  It's the code that styles web content. This article walks you through what you need to get started.
+                  We'll cover topics like: Making content display in certain parts of your webpage, Decorating your
+                  webpages with background images & colors and much more! To get started, you'll need to create a
+                  <code class="inline-code">styles.css</code> file which you can find out how to do
+                  <a href="files.html">here</a>.
+               </p>
+            </section>
+
+            <!-- RULESETS -->
+            <section id="Rulesets" class="main-section">
+               <header>Rulesets</header>
+
+               <img class="transparent-img demo-img" src="../../img/css_rulset_example.png" alt="" />
+               <p>
+                  The whole structure is called a ruleset.
+                  <em>(The term ruleset is often referred to as just rule.)</em>. A ruleset's main parts are as follows:
+               </p>
+               <ul>
+                  <li>
+                     <strong>Selector:</strong>
+                     <p>
+                        This is name of the HTML you want to target and apply styles to (in this example,
+                        <code class="inline-code"><t>p</t></code> elements).
+                     </p>
+                     <div class="code-example">
+                        <code><sel>p</sel></code>
+                     </div>
+                  </li>
+                  <li>
+                     <strong>Declaration:</strong>
+                     <p>
+                        This is a single rule like <code class="inline-code">color: red;</code>. It specifies which of
+                        the element's <strong>properties</strong> you want to style / change.
+                     </p>
+                     <div class="code-example">
+                        <code><prop>color</prop>: <val color="red">red</val>;</code>
+                     </div>
+                  </li>
+                  <li>
+                     <strong>Properties:</strong>
+                     <p>
+                        These are the the specifications of the <strong>properties</strong> you want to style. (in this
+                        example, <code class="inline-code">color</code> is a property of the
+                        <code class="inline-code"><t>p</t></code> element.) In CSS, you choose which properties you want
+                        to affect in a rule.
+                     </p>
+                     <div class="code-example">
+                        <code><prop>color</prop>: </code>
+                     </div>
+                  </li>
+                  <li>
+                     <strong>Property Values:</strong>
+                     <p>
+                        To the right of the property — after the color — there is the <strong>property value</strong>.
+                        This chooses one out of many possible appearances for a given property. (For example, there are
+                        many <code class="inline-code">color</code> values in addition to
+                        <code class="inline-code">red</code>.)
+                     </p>
+                     <div class="code-example">
+                        <code style="white-space: pre-line"
+                           ><val color="red">red</val>
+                           <val color="orange">orange</val>
+                           <val color="yellow">yellow</val>
+                           <val color="green">green</val>
+                           <val color="dodgerblue">blue</val>
+                           <val color="navy">indigo</val>
+                           <val color="rebeccapurple">violet</val>
+
+                           <cmt type="css">etc...</cmt>
+                        </code>
+                     </div>
+                  </li>
+               </ul>
+
+               <p>
+                  To modify multiple element properties in one <strong>ruleset</strong>, we can write them separated by
+                  semicolons, like so:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<sel>p <dec>
+   <prop>color</prop>: <val color="rebeccapurple">violet</val>;
+   <prop>font-size</prop>: <val num>20px</val>
+   <prop>border</prop>: <val num>2px solid black</val>;
+</dec></sel>
+</pre>
+                  </code>
+               </div>
+            </section>
+
+            <!-- SELECTING-MULTIPLE-ELEMENTS -->
+            <section id="Selecting_Multiple_Elements" class="main-section sub">
+               <header>Selecting Multiple Elements</header>
+
+               <p>
+                  In case you were wondering, you can also select multiple elements and apply a single ruleset to all of
+                  them. You separate multiple selectors with commas. For example:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<sel>p,
+li,
+h2 <dec>
+   <prop>color</prop>: <val color="orange">orange</val>;
+</dec></sel>
+</pre>
+                  </code>
+               </div>
+            </section>
+
+            <!-- SELECTING-MULTIPLE-ELEMENT > Types Of Selectors -->
+            <section id="Types_Of_Selectors" class="main-section sub">
+               <header>Types Of Selectors</header>
+
+               <p>
+                  There are many different ways to select elements. The examples above use
+                  <code class="inline-code"><strong>element selectors</strong></code
+                  >, which select all elements of a given type. But we can make more specific selections as well. Here
+                  are some of the more common types of selectors.
+               </p>
+
+               <ol class="list-sections">
+                  <li class="section" id="Element_Selector">
+                     <h2>Element Selector</h2>
+                     <p>
+                        The Element Selector (Type Selector) selects <strong>all</strong> HTML elements of a specified
+                        type.
+                     </p>
+                     <br />
+                     <h3>Example:</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="css">CSS Selector</cmt> 
+
+<sel>span <dec></dec></sel>
+</pre>
+                        </code>
+                     </div>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="html">Selects All Elements Of Same Type</cmt> 
+
+<ot>span</ot>Selected<ct>span</ct>
+<ot>span</ot>Selected<ct>span</ct> 
+<ot>span</ot>Selected<ct>span</ct>
+</pre>
+                        </code>
+                     </div>
+                  </li>
+
+                  <br />
+
+                  <li class="section" id="ID_Selector">
+                     <h2>ID Selector</h2>
+                     <p>The ID Selector selects <strong>one</strong> element on your page with the specified ID.</p>
+                     <br />
+                     <h3>Example:</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="css">CSS Selector</cmt> 
+
+<sel>#title <dec></dec></sel>
+</pre>
+                        </code>
+                     </div>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="html">Selects the ONE element with the specified ID</cmt>
+
+<ot>h1 <at>id</at><atv>title</atv></ot>Selected<ct>h1</ct>
+
+<span class="false"><ot>h2 <at>id</at><atv>title</atv></ot>Not Selected<ct>h2</ct></span>
+</pre>
+                        </code>
+                     </div>
+                     <div class="note-card">
+                        <p>
+                           All declared IDs in your HTML <strong>MUST</strong> be unique. There can never be two elements
+                           with the same ID.
+                        </p>
+                     </div>
+                  </li>
+
+                  <br />
+
+                  <li class="section" id="Class_Selector">
+                     <h2>Class Selector</h2>
+                     <p>
+                        The Class Selector selects <strong>all</strong> element on your page with the specified class.
+                     </p>
+                     <br />
+                     <h3>Example:</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="css">CSS Selector</cmt> 
+
+<sel>.link <dec></dec></sel>
+</pre>
+                        </code>
+                     </div>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="html">Selects all elements with the specified Class</cmt>
+
+<ot>a <at>href</at><atv>twitter.com</atv> <at>class</at><atv>link</atv></ot>Selected<ct>a</ct>
+<ot>a <at>href</at><atv>instagram.com</atv> <at>class</at><atv>link</atv></ot>Selected<ct>a</ct>
+<ot>a <at>href</at><atv>facebook.com</atv> <at>class</at><atv>link</atv></ot>Selected<ct>a</ct>
+</pre>
+                        </code>
+                     </div>
+                     <div class="note-card">
+                        <p>Unlike IDs, you can have as many elements with the same class-name as your heart desires.</p>
+                     </div>
+                  </li>
+
+                  <br />
+
+                  <li class="section" id="Attribute_Selector">
+                     <h2>Attribute Selector</h2>
+                     <p>
+                        The Attribute Selector selects <strong>all</strong> element on your page with the specified
+                        attribute.
+                     </p>
+                     <br />
+                     <h3>Example:</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="css">CSS Selector</cmt> 
+
+<sel>img<val sel>src</val> <dec></dec></sel>
+</pre>
+                        </code>
+                     </div>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="html">Selects all elements with the specified attribute</cmt>
+
+<sct>img <at>src</at><atv>GrumpyDonkey.png</atv></sct> <cmt type="html">Selected</cmt>
+<sct>img <at>src</at><atv>GrumpyHorse.png</atv></sct> <cmt type="html">Selected</cmt>
+</pre>
+                        </code>
+                     </div>
+                     <br />
+                     <p>
+                        If you want to take it a step further, you can select elements with a specific attribute
+                        <em>value</em> like so:
+                     </p>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code
+                           ><sel
+                              >img<val sel>src<atv>GrumpyHorse.png</atv></val> <dec></dec></sel
+                        ></code>
+                     </div>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <sct>img <at>src</at><atv>GrumpyHorse.png</atv></sct> <cmt type="html">Selected</cmt>
+                        </code>
+                     </div>
+                  </li>
+
+                  <br />
+
+                  <li class="section" id="Pseudo-Class_Selector">
+                     <h2>Pseudo-Class Selector</h2>
+                     <p>
+                        The Pseudo-Class Selector selects the specified element(s), but only when in the specified
+                        state. For example when a cursor <code class="inline-code">hovers</code> over a link.
+                     </p>
+                     <br />
+                     <h3>Example:</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="css">CSS Selector</cmt> 
+
+<sel>a:hover <dec>
+   <cmt type="css">Hover CSS</cmt>
+</dec></sel>
+</pre>
+                        </code>
+                     </div>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="html">Selects all specified elements, but only when a mouse pointer is hovering over the link</cmt>
+
+<ot>a <at>href</at><atv>github.io</atv></ot>Github<ct>a</ct>
+</pre>
+                        </code>
+                     </div>
+                  </li>
+               </ol>
+            </section>
+
+            <!-- THE-BOX-MODEL -->
+            <section id="The_Box_Model" class="main-section">
+               <header>The Box Model</header>
+               <img class="demo-img" src="../../img/box_quote.jpg" alt="" />
+               <p>
+                  Something you're bound to notice at some point is that: a lot of CSS is about boxes. Most HTML
+                  elements on your page can be thought of as boxes sitting on top of other boxes, or boxes within a box
+                  that's within another box that's contained by another- you get the point.
+               </p>
+               <p>
+                  CSS layout is mostly based on the glorious <em>box model</em>. Each box taking up space on your page
+                  has properties like:
+               </p>
+               <ul>
+                  <li>
+                     <code class="inline-code">padding</code> — the space around the content. In the example bellow, it
+                     is the space around the paragraph text.
+                  </li>
+                  <li><code class="inline-code">border</code> — the solid line that is just outside the padding.</li>
+                  <li>
+                     <code class="inline-code">padding</code> — the space around the content outside of the border.
+                  </li>
+               </ul>
+               <img class="demo-img" src="../../img/css_box_model.png" alt="" />
+               <br />
+               <p>In this section we also use:</p>
+               <ul>
+                  <li><code class="inline-code">width</code> (of an element)</li>
+                  <li>
+                     <code class="inline-code">background-color</code> — The color behind an element's content and
+                     padding.
+                  </li>
+                  <li><code class="inline-code">color</code> — The Color of an element's content (usually text)</li>
+                  <li>
+                     <code class="inline-code">text-shadow</code> — Sets a drop shadow on the text inside an element.
+                  </li>
+                  <li>
+                     <code class="inline-code">display</code> — Sets the display mode of an element. (we'll talk about
+                     that more <a href="">here</a>)
+                  </li>
+               </ul>
+            </section>
+
+            <!-- BASIC-STYLING -->
+            <section id="Basic_Styling" class="main-section">
+               <header>Basic Styling</header>
+               <p>
+                  In this section, you'll learn basic ways to style a document. The below is some HTML to get you
+                  started. Be sure to learn <a href="files.html">How To Create & Link Files</a>.
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<cmt type="html">HTML</cmt> 
+
+<doct>DOCTYPE <at>html</at></doct>
+<ot>html</ot>
+   <ot>head</ot>
+      <sct>meta <at>charset</at><atv>UTF-8</atv> </sct>
+      <sct>meta <at>name</at><atv>viewport</atv> <at>content</at><atv>width=device-width, initial-scale=1.0</atv> </sct>
+      <ot>title</ot>Document<ct>title</ct>
+      <sct>link <at>rel</at><atv>stylesheet</atv> <at>href</at><atv>styles.css</atv></sct>
+   <ct>head</ct>
+   <ot>body</ot>
+      <ot>h1</ot>The Great Lake<ct>h1</ct>
+      <sct>img <at>scr</at><atv>https://unsplash.com/photos/snow-covered-mountain-near-body-of-water-during-daytime-fvJwchRL6xw</atv></sct>
+   <ct>body</ct>
+<ct>html</ct>
+</pre>
+                  </code>
+               </div>
+               <p>
+                  Make sure to like your document to the correct name of your .css file. You can learn how to link and
+                  create your files <a href="files.html">Here</a>.
+               </p>
+               <p>Right off the bat, without any styling, the website looks like a mess.</p>
+               <video class="example-video demo-video" loop autoplay muted>
+                  <source src="../../img/website_example.mp4" type="video/mp4" />
+                  Oops! Something went wrong while trying to load this video.
+               </video>
+            </section>
+
+            <!-- BASIC-STYLING > Page Color -->
+            <section id="Page_Color" class="main-section sub">
+               <header>Changing The Page Color</header>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<cmt type="css">CSS</cmt> 
+
+<sel>html <dec>
+   <prop>background-color</prop>: <val color="#0d0d10">#0d0d10</val>;
+</dec></sel>
+</pre>
+                  </code>
+               </div>
+               <p>The following rule sets the background color of your entire page.</p>
+            </section>
+
+            <!-- BASIC-STYLING > Styling The Body -->
+            <section id="Styling_The_Body" class="main-section sub">
+               <header>Styling The Body</header>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<cmt type="css">CSS</cmt> 
+
+<sel>body <dec>
+   <prop>width</prop>: <val num>600px</val>;
+   <prop>margin</prop>: <val num>0 auto</val>;
+   <prop>padding</prop>: <val num>0 20px 20px 20px</val>;
+   <prop>background-color</prop>: <val color="black">black</val>;
+   <prop>border</prop>: <val num>5px</val> <val>solid</val> <val color="dodgerblue">dodgerblue</val>;
+   <prop>font-family</prop>: <val>sans-serif</val>
+</dec></sel>
+</pre>
+                  </code>
+               </div>
+               <p>
+                  In this example, there are several different declarations for the
+                  <code class="inline-code"><ot>body</ot></code> element. Let's go through them line-by-line:
+               </p>
+               <ul>
+                  <li>
+                     <code class="inline-code">width: 600px;</code>
+                     — This forces the body to always be 600 pixels wide.
+                  </li>
+                  <li>
+                     <code class="inline-code">margin: 0 auto;</code> — When give a property like
+                     <code class="inline-code">margin</code> or <code class="inline-code">padding</code> two values, the
+                     first value affects the element's <em>top</em> and <em>bottom</em> sides (settings it to
+                     <code class="inline-code">0</code> in this case); while the second value affects the
+                     <em>left</em> and <em>right</em> sides. Here, <code class="inline-code">auto</code> is a special
+                     value that divides the available horizontal space evenly between left and right.
+                  </li>
+                  <li>
+                     <code class="inline-code">padding: 0 20px 20px 20px;</code> — This rule sets for values for the
+                     body's padding. The goal is to put some space around the content. In this example, there is no
+                     padding at the top of the body, 20 pixels on the right, bottom, and left. The padding values set
+                     top, right, bottom, left in that order.
+                  </li>
+                  <li>
+                     <code class="inline-code">background-color: black;</code> — This sets the element's background
+                     color which, in this example, we set to <code class="inline-code">black</code>. However, you can
+                     change this to what ever you like.
+                  </li>
+                  <li>
+                     <code class="inline-code">border: 5px solid dodgerblue;</code> — This sets values for the width,
+                     style and color of the border. In this case, it's a five-pixel-wide, solid dodgerblue border, on
+                     all sides of the body.
+                  </li>
+                  <li><code class="inline-code">font-family: sans-serif</code></li>
+                  — Sets the font-family of the text to "sans-serif" which is a very common font used in browsers.
+               </ul>
+            </section>
+
+            <!-- BASIC-STYLING > Styling The Main Title  -->
+            <section id="Styling_The_Main_Title" class="main-section sub">
+               <header>Styling The Main Title</header>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<cmt type="css">CSS</cmt> 
+
+<sel>h1 <dec>
+   <prop>margin</prop>: <val num>0</val>;
+   <prop>padding</prop>: <val num>20px 0</val>;
+   <prop>color</prop>: <val color="white">black</val>;
+   <prop>text-shadow</prop>: <val color="#dodgerblue">3px 3px 1px dodgerblue</val>;
+   <prop>text-align</prop>: <val>center</val>;
+</dec></sel>
+</pre>
+                  </code>
+               </div>
+               <p>
+                  In this example, we'll change the rather <em>ugly</em> default gap that browsers apply to the
+                  <code class="inline-code"><ot>h1</ot></code> element. That might seem like a bad idea at first, but
+                  the intent is to provide basic readability for unstyled pages. To eliminate the gap, we overwrite the
+                  browser's default styling with the setting <code class="inline-code">margin: 0;</code>.
+               </p>
+               <p>
+                  Next, we set the heading's top and bottom padding to 20 pixels. (
+                  <code class="inline-code">padding: 20px 0;</code> )
+               </p>
+               <p>Following that, we can set the title to be white to better contrast with the background.</p>
+               <p>
+                  Then, we'll add a <code class="inline-code">text-shadow</code> which, as the name implies, applies a
+                  shadow to the text content of the element. It has four definable values:
+               </p>
+               <ul>
+                  <li>
+                     The first pixel value sets the <strong>horizontal offset</strong> of the shadow from the text: how
+                     far it moves across.
+                  </li>
+                  <li>
+                     The second pixel value sets the <strong>vertical offset</strong> of the shadow from the text: how
+                     far it moves down.
+                  </li>
+                  <li>
+                     The third pixel value sets the <strong>blur radius</strong> of the shadow. A larger value produces
+                     a more fuzzy-looking shadow.
+                  </li>
+                  <li>The fourth and last value sets the color of the shadow (in this case dodgerblue).</li>
+               </ul>
+               <p>Finally, we'll center the text using <code class="inline-code">text-align: center;</code></p>
+               <p>Try experimenting with different values to see how it changes in appearance.</p>
+            </section>
+
+            <!-- BASIC-STYLING > CENTERING IMAGES -->
+            <section id="Centering_Images" class="main-section sub">
+               <header>Centering Images</header>
+               <p>
+                  One of the most common things you'll be doing CSS & HTML is centering elements. This section teaches
+                  you one of basic, out of numerous, ways to center an image. We could use the
+                  <code class="inline-code">margin: 0 auto;</code> trick again as we did for the body. But there are
+                  differences that require an additional setting to make the CSS work.
+               </p>
+               <p>
+                  The <code class="inline-code"><ot>body</ot></code> is a <strong>block</strong> element, meaning it
+                  takes up space on the page. The margin applied to a block element will be respected by other elements
+                  on the page. In contrast, images are inline elements, for the auto margin trick to work on this image,
+                  we must give it block-level behavior using <code class="inline-code">display: block;</code>.
+               </p>
+               <p>
+                  However, it's important to note that if the element, or in this case image, you use is larger than the
+                  width set on the body (600 pixels) or parent element of your image, it will overflow the body,
+                  spilling into the rest of the page. To fix this, you can either: reduce the image width using a
+                  graphics editor or; use CSS to size the image by setting the
+                  <code class="inline-code">width</code> property on your
+                  <code class="inline-code"><ot>img</ot></code> to a smaller value the the body or to 100% as
+                  demonstrated in this example. Setting the with to 100% will make the
+                  <code class="inline-code">img</code> take up 100% of the body's width.
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<cmt type="css">CSS</cmt> 
+
+<sel>img <dec>
+   <prop>display</prop>: <val>block</val>;
+   <prop>margin</prop>: <val num>0 auto</val>;
+   <prop>width</prop>: <val num>100%</val>
+</dec></sel>
+</pre>
+                  </code>
+               </div>
+            </section>
+
+            <!-- BASIC-STYLING > Result -->
+            <section id="Result" class="main-section sub">
+               <header>Result</header>
+               <p>
+                  If your were able to follow along and complete the steps, you should have a page that looks like this:
+               </p>
+               <img class="demo-img" src="../../img/basic_styling_final_result.png" alt="" />
+               <p>Go ahead and give yourself a pat on the back. 🎉</p>
+            </section>
+         </div>
+      </main>
+   </body>
+   <script src="../../scripts/htmlFormat.js" defer></script>
+   <script src="../../scripts/cssFormat.js" defer></script>
+   <script src="../../scripts/javascriptFormat.js"></script>
+
+   <!-- REMEMBER DOM ORDER IS RELATIVE TO JS LOAD ORDER !!! -->
+   <script src="../../scripts/script.js" defer></script>
+</html>

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Web Page Basics</title>
+      <link rel="stylesheet" href="../../style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   </head>
+   <div id="img-preview" class="img-preview hidden">
+      <div id="img-prev-close">
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <img class="" src="" alt="" />
+   </div>
+   <body data-language="javascript">
+      <aside id="navbar" class="sidebar">
+         <header>Web Basics</header>
+         <div class="sidebar-category">
+            <div class="languages">
+               <a href="../html-basics/"><i class="fa-brands fa-html5"></i></a>
+               <a href="../css-basics/"><i class="fa-brands fa-css3-alt"></i></a>
+               <a href="../javascirpt-basics/" data-active><i class="fa-brands fa-square-js"></i></a>
+               <a href="../creating-files/"><i class="fa-regular fa-file-code"></i></a>
+            </div>
+            <a class="overview" href="../../">Overview</a>
+         </div>
+         <div class="chapter-container">
+            <div data-chapter="js" class="chapter">JavaScript</div>
+         </div>
+         <div id="sidebar" class="sidebar-links">
+            <ol>
+               <li><a class="nav-link" href="#JavaScript_Basics">Introduction</a></li>
+               <li><a class="nav-link" href="#You_Should_Know">You Should Know</a></li>
+               <li class="toggle">
+                  <details>
+                     <summary>Variables</summary>
+                     <ol>
+                        <li><a class="nav-link" href="#Variables">Basics</a></li>
+                        <li><a class="nav-link" href="#Strings">Strings</a></li>
+                        <li><a class="nav-link" href="#Numbers">Numbers</a></li>
+                        <li><a class="nav-link" href="#Booleans">Booleans</a></li>
+                        <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+                        <li><a class="nav-link" href="#Objects">Objects</a></li>
+                     </ol>
+                  </details>
+               </li>
+               <li><a class="nav-link" href="#Comments">Comments</a></li>
+               <li class="toggle">
+                  <details>
+                     <summary>Operators</summary>
+                     <ol>
+                        <li><a class="nav-link" href="#Operators">Basics</a></li>
+                        <li><a class="nav-link" href="#Arithmetic_Operators">Arithmetic Operators</a></li>
+                        <li><a class="nav-link" href="#Comparison_Operators">Comparison Operators</a></li>
+                     </ol>
+                  </details>
+               </li>
+            </ol>
+         </div>
+      </aside>
+      <div data-sb-toggle class="sb-toggle">
+         <i class="fa-solid fa-angles-right"></i>
+      </div>
+
+      <main id="main-doc">
+         <div class="master-section">
+            <!-- JAVASCRIPT-BASICS -->
+            <section id="JavaScript_Basics" class="main-section">
+               <header>JavaScript Basics</header>
+               <p>
+                  JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive
+                  (e.g., having complex animations, clickable buttons, popup menus, etc.). There are also more advanced
+                  server side versions of JavaScript such as Node.js, which allow you to add more functionality to a
+                  website than downloading files (such as realtime collaboration between multiple computers). Inside a
+                  host environment (for example, a web browser), JavaScript can be connected to the objects of its
+                  environment to provide programmatic control over them.
+               </p>
+               <p>
+                  JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of
+                  language elements such as operators, control structures, and statements. Core JavaScript can be
+                  extended for a variety of purposes by supplementing it with additional objects; for example:
+               </p>
+               <ul>
+                  <li>
+                     Client-side JavaScript extends the core language by supplying objects to control a browser and its
+                     Document Object Model (DOM). For example, client-side extensions allow an application to place
+                     elements on an HTML form and respond to user events such as mouse clicks, form input, and page
+                     navigation.
+                  </li>
+                  <li>
+                     Server-side JavaScript extends the core language by supplying objects relevant to running
+                     JavaScript on a server. For example, server-side extensions allow an application to communicate
+                     with a database, provide continuity of information from one invocation to another of the
+                     application, or perform file manipulations on a server..
+                  </li>
+               </ul>
+            </section>
+
+            <!-- HELLO-WORD -->
+            <section id="You_Should_Know" class="main-section">
+               <header>You Should Know</header>
+               <p>
+                  Before diving into the bring and fantastical world of what we call, JavaScript, there are a few things
+                  you should know!
+               </p>
+               <ul>
+                  <li>A general understand of the Internet and the World Wide Web (www)</li>
+                  <li>Good working knowledge of HyperText Markup Languages (HTML)</li>
+                  <li>Some programming experience.</li>
+               </ul>
+               <p>
+                  Knowing the following will not only make things easier for you, but give you the ability to come up
+                  with and understand code that your write by yourself later on.
+               </p>
+            </section>
+
+            <!-- Variables -->
+            <section id="Variables" class="main-section">
+               <header>Variables</header>
+               <p>
+                  Variables are containers that store values. You start by declaring a variable with the let keyword,
+                  followed by the name you give to the variable:
+               </p>
+               <div class="code-example">
+                  <code><js declare="let">myVariable</js> <val>"Hello World!"</val>;</code>
+               </div>
+               <p>
+                  A semicolon at the end of a line indicates where a statement ends. It is only required when you need
+                  to separate statements on a single line. However, some people believe it's good practice to have
+                  semicolons at the end of each statement. There are other rules for when you should and shouldn't use
+                  semicolons.
+               </p>
+               <p>You can name a variable nearly anything, but there are some restrictions:</p>
+               <ol>
+                  <li>Variable names must start with a letter (a - z / A - Z), underscore(_), or dollar($) sign.</li>
+                  <li>After the first letter, we can use digits (0 - 9). For example, value1</li>
+               </ol>
+               <p>
+                  JavaScript is also case sensitive. This means <code class="inline-code">myVariable</code> is not the
+                  same as <code class="inline-code">myvariable</code>. If you have problems in your code, check the
+                  case!
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<cmt type="js">Correct Javascript Variables</cmt>
+<js declare="var">value</js> <val num>1</val>;
+<js declare="var">_value</js> <val>"true"</val>;
+<js declare="var">value_2</js> <val num>true</val>;
+
+<cmt type="js">Incorrect Javascript Variables</cmt>
+<span class="false"><js declare="var">123</js> <val num>0</val>;
+<js declare="var">*value</js> <val>"false"</val>;
+<js declare="var">value two</js> <val num>false</val>;</span>
+</pre>
+                  </code>
+               </div>
+
+               <p>You retrieve the value by calling the variable name:</p>
+
+               <div class="code-example">
+                  <code><js>myVariable</js>;</code>
+               </div>
+
+               <p>After assigning a value to a variable, you can change it later in the code:</p>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js declare="var">myVariable</js> <val>"Some Words"</val>; 
+<js>myVariable</js> = <val>"Still Words"</val>;
+</pre>
+                  </code>
+               </div>
+
+               <p>
+                  Now you know how to declare and change variables on the fly! It is important to note that variables
+                  may hold different values that have different data-types:
+               </p>
+
+               <!-- VARIABLES > List Section -->
+               <ol class="list-sections">
+                  <!-- Strings -->
+                  <li id="Strings" class="section">
+                     <h2>Strings</h2>
+                     <p>
+                        Strings are sequences of text. To signify that the value is a string, enclose it in single or
+                        double quote marks.
+                     </p>
+                     <br />
+                     <h3>Example</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="js">JS Declaration</cmt>
+
+<js declare="let">myVariable</js> <val>'Bob'</val>;
+<js declare="let">myVariable</js> <val>"Bob"</val>;
+</pre>
+                        </code>
+                     </div>
+                  </li>
+
+                  <br />
+
+                  <!-- Numbers -->
+                  <li id="Numbers" class="section">
+                     <h2>Numbers</h2>
+                     <p>
+                        Numbers don't have quotes around them. Adding quotes around them turn them into strings. So,
+                        it's important to remember to write them without quotation marks when you're trying to do math
+                        with them.
+                     </p>
+                     <br />
+                     <h3>Example</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="js">JS Declaration</cmt>
+
+<js declare="let">myVariable</js> <val num>10</val>;
+</pre>
+                        </code>
+                     </div>
+                  </li>
+
+                  <br />
+
+                  <!-- Booleans -->
+                  <li id="Booleans" class="section">
+                     <h2>Booleans</h2>
+                     <p>
+                        Booleans are declared with <code class="inline-code">true / false</code>. The worlds
+                        <code class="inline-code">true</code> and <code class="inline-code">false</code> are special
+                        keywords that don't need quote marks.
+                     </p>
+                     <br />
+                     <h3>Example</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="js">JS Declaration</cmt>
+
+<js declare="let">myVariable</js> <val num>true</val>;
+</pre>
+                        </code>
+                     </div>
+                  </li>
+
+                  <br />
+
+                  <!-- Arrays -->
+                  <li id="Arrays" class="section">
+                     <h2>Arrays</h2>
+                     <p>Arrays are structures that allow you to store multiple values in a single reference.</p>
+                     <br />
+                     <h3>Example</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="js">JS Declaration</cmt>
+
+<js declare="let">myVariable</js> <val sel><val num>10</val>, <val>'Hello'</val>, <val>'World'</val>, <val num>false</val></val>;
+
+<cmt type="js">You can refer to each member of the array like this:</cmt>
+
+<js>myVariable</js><val sel>0</val>; <cmt type="js">refers to: 10</cmt>
+<js>myVariable</js><val sel>1</val>; <cmt type="js">refers to: 'Hello'</cmt>
+</pre>
+                        </code>
+                     </div>
+                  </li>
+
+                  <br />
+
+                  <!-- Objects -->
+                  <li id="Objects" class="section">
+                     <h2>Objects</h2>
+                     <p>
+                        Objects can be anything. Everything in JavaScript is an object and can be stored in a variable.
+                        Keep this in mind as your learn.
+                     </p>
+                     <br />
+                     <h3>Example</h3>
+                     <div class="code-example">
+                        <span class="alert hidden">Copied!</span>
+                        <div class="code-copy-btn">
+                           <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <code>
+                           <pre>
+<cmt type="js">JS Declaration</cmt>
+
+<js declare="let">myVariable</js> <js>document.<js type="method">querySelector(<val>'h1'</val>)</js></js>;
+</pre>
+                        </code>
+                     </div>
+                  </li>
+
+                  <br />
+               </ol>
+            </section>
+
+            <!-- Comments -->
+            <section id="Comments" class="main-section">
+               <header>Comments</header>
+               <p>
+                  This far in, you must've noticed the use of comments, all highlighted in dark green, across all the
+                  Javascript examples.
+               </p>
+               <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<cmt type="js">This is a comment</cmt>
+
+<cmt type="js">This type of comment</cmt>
+can't have a line break.
+</pre>
+                  </code>
+               </div>
+               <br />
+               <p>
+                  If your comment happens to have more than one line, you can write it just like your would a CSS
+                  comment:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<cmt type="js-multi">This is
+a multi-line
+comment</cmt>
+</pre>
+                  </code>
+               </div>
+            </section>
+
+            <!-- OPERATORS -->
+            <section id="Operators" class="main-section">
+               <header>Operators</header>
+
+               <p>JavaScript operators are symbols that are used to perform operations on operands. For example:</p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js declare="const">sum</js> <val num>20</val> + <val num>10</val>
+</pre>
+                  </code>
+               </div>
+               <p>
+                  Here, <code class="inline-code">+</code> is the arithmetic operator and
+                  <code class="inline-code">=</code> is the assignment operator.
+               </p>
+               <p>There are 6 type of operators in JavaScript</p>
+               <ol>
+                  <li>Arithmetic Operators</li>
+                  <li>Comparison (Relational) Operators</li>
+                  <li>Bitwise Operators</li>
+                  <li>Logical Operators</li>
+                  <li>Assignment Operators</li>
+                  <li>Special Operators</li>
+               </ol>
+               <p>However, in this guide, we'll only go over Arithmetic & Comparison Operators.</p>
+            </section>
+
+            <!-- OPERATORS > Arithmetic -->
+            <section id="Arithmetic_Operators" class="main-section sub">
+               <header>Arithmetic Operators</header>
+
+               <p>
+                  Arithmetic Operators are used to perform arithmetic operations on the values. The following operators
+                  are known as JavaScript arithmetic operators.
+               </p>
+               <div class="table">
+                  <table>
+                     <thead>
+                        <tr>
+                           <td colspan="100">Variables (used for the examples below)</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td colspan="100">
+                              <code> <js declare="let">a</js> <val num>20</val> </code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="100">
+                              <code> <js declare="let">b</js> <val num>10</val> </code>
+                           </td>
+                        </tr>
+                     </tbody>
+                     <thead>
+                        <tr>
+                           <td style="width: 0%">Operator</td>
+                           <td>Description</td>
+                           <td>Example</td>
+                           <td>Output</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td><code>+</code></td>
+                           <td>Addition</td>
+                           <td>
+                              <code> <js>a</js> + <js>b</js></code>
+                           </td>
+                           <td>
+                              <code><val num>30</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>-</code></td>
+                           <td>Subtraction</td>
+                           <td>
+                              <code> <js>a</js> - <js>b</js></code>
+                           </td>
+                           <td>
+                              <code><val num>10</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>*</code></td>
+                           <td>Subtraction</td>
+                           <td>
+                              <code>
+                                 <code> <js>a</js> * <js>b</js> </code>
+                              </code>
+                           </td>
+                           <td>
+                              <code><val num>200</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>/</code></td>
+                           <td>Subtraction</td>
+                           <td>
+                              <code> <js>a</js> / <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>2</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>%</code></td>
+                           <td>Modulus (Remainder)</td>
+                           <td>
+                              <code> <js>a</js> % <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>0</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>++</code></td>
+                           <td>Increment</td>
+                           <td>
+                              <code> <js>a</js>++ </code>
+                           </td>
+                           <td>
+                              <code><val num>21</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>--</code></td>
+                           <td>Decrement</td>
+                           <td>
+                              <code> <js>b</js>-- </code>
+                           </td>
+                           <td>
+                              <code><val num>9</val></code>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </section>
+
+            <!-- OPERATORS > Comparison -->
+            <section id="Comparison_Operators" class="main-section sub">
+               <header>Comparison Operators</header>
+
+               <p>
+                  The JavaScript Comparison Operator compares the two values and returns a
+                  <code class="inline-code">true/false</code> (boolean) value. The comparison operators are as follows:
+               </p>
+
+               <div class="table">
+                  <table>
+                     <thead>
+                        <tr>
+                           <td colspan="100">Variables (used for the examples below)</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td colspan="100">
+                              <code> <js declare="let">a</js> <val num>20</val> </code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="100">
+                              <code> <js declare="let">b</js> <val num>10</val> </code>
+                           </td>
+                        </tr>
+                     </tbody>
+                     <thead>
+                        <tr>
+                           <td style="width: 0%">Operator</td>
+                           <td>Description</td>
+                           <td>Example</td>
+                           <td>Output</td>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td><code>==</code></td>
+                           <td>Is equal to</td>
+                           <td>
+                              <code> <js>a</js> == <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>false</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>===</code></td>
+                           <td>Strict Equality (Identical)</td>
+                           <td>
+                              <code> <js>a</js> == <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>false</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>!=</code></td>
+                           <td>Not equal to</td>
+                           <td>
+                              <code> <js>a</js> != <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>false</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>!==</code></td>
+                           <td>Strict Inequality (Not Identical)</td>
+                           <td>
+                              <code> <js>a</js> !== <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>false</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>&gt;</code></td>
+                           <td>Greater than</td>
+                           <td>
+                              <code> <js>a</js> &gt; <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>true</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>&gt;=</code></td>
+                           <td>Greater than or equal to</td>
+                           <td>
+                              <code> <js>a</js> &gt;= <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>true</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>&lt;</code></td>
+                           <td>Greater than</td>
+                           <td>
+                              <code> <js>a</js> &lt; <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>false</val></code>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><code>&lt;=</code></td>
+                           <td>Greater than or equal to</td>
+                           <td>
+                              <code> <js>a</js> &lt;= <js>b</js> </code>
+                           </td>
+                           <td>
+                              <code><val num>false</val></code>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </section>
+
+            <!-- Conditionals -->
+            <section class="main-section">
+               <header>Conditionals</header>
+
+               <p>
+                  Conditionals are code structures used to test if an expression returns true or not. A very common form
+                  of conditionals is the <code class="inline-code">if...else</code> statement. For example:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js declare="let">answer</js> <val>"England"</val>
+
+<js condition="if"><js>answer</js> === <val>"England"</val></js> <js condition="dec">
+   <js type="method">alert</js>(<val>"That answer is Correct! 🎉"</val>)
+</js> <js condition="else">
+   <js type="method">alert</js>(<val>"That answer is Incorrect. ❌"</val>)
+</js>
+</pre>
+                  </code>
+               </div>
+               <br />
+               <p>
+                  Let's break this down. The condition first tests the expression inside
+                  <code class="inline-code">if ()</code>. This uses the
+                  <a href="#Comparison_Operators">Strict Equality</a> operator to compare the variable,
+                  <code class="inline-code">answer</code>, with the string, <code class="inline-code">England</code>, to
+                  see if the two are equal. If this condition returns <code class="inline-code">true</code>, the first
+                  block of code runs:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js condition="if"><js>answer</js> === <val>"England"</val></js> <js condition="dec">
+   <js type="method">alert</js>(<val>"That answer is Correct! 🎉"</val>)
+</js>
+</pre>
+                  </code>
+               </div>
+               <br />
+               <p>
+                  If the comparison returns <code class="inline-code">false</code>, the second block of code — after the
+                  <code class="inline-code">else</code> statement — runs instead:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js condition="else">
+   <js type="method">alert</js>(<val>"That answer is Incorrect. ❌"</val>)
+</js>
+</pre>
+                  </code>
+               </div>
+            </section>
+
+            <!-- Functions -->
+            <section class="main-section">
+               <header>Functions</header>
+
+               <p>
+                  Functions are a way of packaging functionality that you wish to reuse. It's possible to define a body
+                  of code as a function that executes when you call the function name in your code. This is a good
+                  alternative to repeatedly writing the same code. You have already seen some uses of functions. For
+                  example:
+               </p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js declare="let">variable</js> <js>document</js>.<js type="method">querySelector</js>(<val>"h1"</val>);
+</pre>
+                  </code>
+               </div>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js type="method">alert</js>(<val>"hello!"</val>);
+</pre>
+                  </code>
+               </div>
+
+               <p>
+                  These functions, <code class="inline-code">document.querySelector</code> and
+                  <code class="inline-code">alert</code>, are built into the browser.
+               </p>
+               <p>
+                  If you see something which looks like a variable name, but it's followed by parentheses —
+                  <code class="inline-code">()</code> — it is likely a function. Functions often take arguments: bits of
+                  data they need to do their job. Arguments go inside the parentheses, separated by commas if there is
+                  more than one argument.
+               </p>
+               <p>
+                  For example, the <code class="inline-code">alert()</code> function makes a pop-up box appear inside
+                  the browser window, but we need to give it a string as an argument to tell the function what message
+                  to display.
+               </p>
+               <p>
+                  You can also define your own functions. In the next example, we create a simple function which takes
+                  two numbers as arguments and multiplies them:
+               </p>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js declare="function" fname="multiply"><js>a</js>, <js>b</js></js> <js condition="dec">
+   <js declare="let">result</js> <js>a</js> * <js>b</js>
+   <span class="var-type">return</span> <js>result</js>;
+</js>
+</pre>
+                  </code>
+               </div>
+               <p>Now you can run your function and input the arguments whenever you want!</p>
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js type="method">multiply</js>(<js>5</js>, <js>16</js>); <cmt type="js">returns - 80</cmt>
+<js type="method">multiply</js>(<js>9</js>, <js>2</js>); <cmt type="js">returns - 18</cmt>
+<js type="method">multiply</js>(<js>37</js>, <js>21</js>); <cmt type="js">returns - 777</cmt>
+</pre>
+                  </code>
+               </div>
+               <div class="note-card">
+                  <p>
+                     The <code class="inline-code">return</code> statement tells the browser to return the
+                     <code class="inline-code">result</code> variable out of the function so it is available to use.
+                     This is necessary because variables defined inside functions are only available inside those
+                     functions. This is called variable scoping. (Read more about variable scoping.)
+                  </p>
+               </div>
+            </section>
+
+            <!-- Events -->
+            <section id="Events" class="main-section">
+               <header>Events</header>
+
+               <p>
+                  Real interactivity on a website requires event handlers. These are code structures that listen for
+                  activity in the browser, and run code in response. The most obvious example is handling the click
+                  event, which is fired by the browser when you click on something with your mouse.
+               </p>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js>document</js>.<js type="method">querySelector</js><js type="bracket"><val>"html"</val></js>.<js type="method">addEventListener</js><js type="bracket"><val>"click"</val>, <js>function</js> <js type="bracket"></js> <js condition="dec">
+   <js type="method">alert</js><js type="bracket"><val>"Looks like it works!"</val></js>;
+</js></js>;
+</pre>
+                  </code>
+               </div>
+
+               <p>
+                  There are a number of ways to attach an event handler to an element. Here we select the
+                  <code class="inline-code"><t>html</t></code
+                  >element. We then call its <code class="inline-code">addEventListener()</code> function, passing in
+                  the name of the event to listen to (<code class="inline-code">'click'</code>) and a function to run
+                  when the event happens.
+               </p>
+               <p>
+                  The function we just passed to <code class="inline-code">addEventListener()</code> here is called an
+                  anonymous function, because it doesn't have a name. There's an alternative way of writing anonymous
+                  functions, which we call an arrow function. An arrow function uses
+                  <code class="inline-code">() =></code> instead of <code class="inline-code">function ()</code>:
+               </p>
+
+               <div class="code-example">
+                  <span class="alert hidden">Copied!</span>
+                  <div class="code-copy-btn">
+                     <i class="fa-regular fa-copy"></i>
+                  </div>
+                  <code>
+                     <pre>
+<js>document</js>.<js type="method">querySelector</js><js type="bracket"><val>"html"</val></js>.<js type="method">addEventListener</js><js type="bracket"><val>"click"</val>, () => <js condition="dec">
+   <js type="method">alert</js>(<val>"Looks like it works!"</val>);
+</js></js>;
+</pre>
+                  </code>
+               </div>
+            </section>
+         </div>
+      </main>
+   </body>
+   <script src="../../scripts/htmlFormat.js" defer></script>
+   <script src="../../scripts/cssFormat.js" defer></script>
+   <script src="../../scripts/javascriptFormat.js"></script>
+
+   <!-- REMEMBER DOM ORDER IS RELATIVE TO JS LOAD ORDER !!! -->
+   <script src="../../scripts/script.js" defer></script>
+</html>

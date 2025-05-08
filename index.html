@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Web Page Basics</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   </head>
+   <div id="img-preview" class="img-preview hidden">
+      <div id="img-prev-close">
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <img class="" src="" alt="" />
+   </div>
+   <body data-language="">
+      <aside id="navbar" class="sidebar">
+         <header>Keed</header>
+         <div class="sidebar-category">
+            <div class="languages">
+               <a href="guides/html-basics/"><i class="fa-brands fa-html5"></i></a>
+               <a href="guides/css-basics/"><i class="fa-brands fa-css3-alt"></i></a>
+               <a href="guides/javascirpt-basics/"><i class="fa-brands fa-square-js"></i></a>
+               <a href="guides/creating-files/"><i class="fa-regular fa-file-code"></i></a>
+            </div>
+            <a class="overview" href="./" data-active>Overview</a>
+         </div>
+         <div class="chapter-container">
+            <div data-chapter="overview" class="chapter">Overview</div>
+         </div>
+         <div id="sidebar" class="sidebar-links">
+            <ol>
+               <li><a class="nav-link" href="#Overview">Overview</a></li>
+               <li><a class="nav-link" href="#References">References</a></li>
+               <li><a class="nav-link" href="#Important">Important</a></li>
+               <li><a class="nav-link" href="#Creator">Creator</a></li>
+            </ol>
+         </div>
+      </aside>
+      <div data-sb-toggle class="sb-toggle">
+         <i class="fa-solid fa-angles-right"></i>
+      </div>
+
+      <main id="main-doc">
+         <div class="master-section">
+            <!-- OVERVIEW -->
+            <section id="Overview" class="main-section">
+               <header>Overview</header>
+
+               <p>
+                  These three tools dominate web development. Every library or tool seems to be centered around HTML,
+                  CSS, and JS. So if you want to become a web developer, you need to learn them well. You'll also
+                  discover that websites are mostly built from these three languages.
+
+                  
+               </p>
+               <p>
+                  This Documentation goes over the fundaments of all three languages. It will teach you how to create
+                  basic website structures and provide you with a basic understanding and idea of how to use all three
+                  languages.
+               </p>
+            </section>
+
+            <!-- REFERENCES -->
+            <section class="main-section" id="References">
+               <header>References</header>
+
+               <p>
+                  All content in this Documentation where taken from separate sources as part of a required project for
+                  <a href="https://freecodecamp.org" target="_blank">freeCodeCamp.org</a>.
+               </p>
+               <strong>REFERENCES:</strong>
+               <ul>
+                  <li>
+                     <a
+                        target="_blank"
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files#what_else_should_be_done"
+                        >MDN web docs - Dealing with files</a
+                     >
+                  </li>
+                  <li>
+                     <a
+                        target="_blank"
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+                        >MDN web docs - HTML basics</a
+                     >
+                  </li>
+                  <li>
+                     <a
+                        target="_blank"
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics"
+                        >MDN web docs - CSS basics</a
+                     >
+
+                    
+                  </li>
+                  <li>
+                     <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"
+                        >MDN web docs - JavaScript basics</a
+                     >
+                  </li>
+                  <li>
+                     <a target="_blank" href="https://www.javatpoint.com/javascript-tutorial"
+                        >Javapoint - Learn JavaScript Tutorial</a
+                     >
+                  </li>
+               </ul>
+            </section>
+
+            <!-- IMPORTANT -->
+            <section class="main-section" id="Important">
+               <header>Important</header>
+
+               <p>
+                  As stated earlier, this documentation was created as a <em>project</em> created for freeCodeCamp.org
+                  and may be subject to errors. There may be minor spelling / grammar mistakes and incorrect /
+                  misleading information. If you do encounter such problems, feel free to notify me of there
+                  <a target="_blank" href="">here</a>.
+               </p>
+            </section>
+
+            <!-- CREATOR-->
+            <section class="main-section" id="Creator">
+               <header>Creator</header>
+
+               <p>You can follow my projects here!</p>
+
+               <div class="follow-links">
+                  <a class="link" href="https://github.com/lelixn">
+                     <i class="fa-brands fa-github"></i>
+                  </a>
+                  </a>
+                  <a class="link" href="https://codepen.io/lelixn">
+                     <i class="fa-brands fa-codepen"></i>
+                  </a>
+               </div>
+            </section>
+         </div>
+      </main>
+   </body>
+   <script src="scripts/htmlFormat.js" defer></script>
+   <script src="scripts/cssFormat.js" defer></script>
+   <script src="scripts/javascriptFormat.js"></script>
+
+   <!-- REMEMBER DOM ORDER IS RELATIVE TO JS LOAD ORDER !!! -->
+   <script src="scripts/script.js" defer></script>
+</html>
