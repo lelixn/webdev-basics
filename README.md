@@ -65,14 +65,14 @@ Open a Pull Request
 ---
 This project is licensed under the MIT License.
 
----
+
 
 ✨ Author
 ---
 Made with 💻 by Lelien Panda
 
----
 
+```yaml
 Let me know if you'd like it personalized more (e.g., with emojis, contribution guidelines, or tech badges). I can also include automated deployment instructions if you plan to host this via GitHub Pages.
 
 
